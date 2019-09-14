@@ -1,0 +1,8 @@
+
+1) Route using middleware --Done
+2) Using Mongoose
+3) Making model 
+4) Controller
+5) Completing an Api
+
+
