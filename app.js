@@ -5,6 +5,10 @@ app.use(morgan('dev'))
 
 //Config Imports
 const config = Object.freeze(require('./config/local'))
+//Db Import
+const dbCon = require('./db');
+//Db Connection
+dbCon();
 
 //Routes Import
 const exampleRoutes = require('./lib/endpoints/Examples/Routes');
@@ -12,6 +16,7 @@ app.set("port", config.http.port);
 
 //Example Routes
 app.use(exampleRoutes);
+
 
 //Server Listening
 app.listen(app.get('port'), 
