@@ -11,7 +11,7 @@ const dbCon = () => {
         db.on('error', console.error.bind(console, 'Connection Error'));
         
         db.on('error', ()=>{
-            reject(err);
+            reject('Error in DB Connection');
         });
 
         db.once('open', function callback () {
